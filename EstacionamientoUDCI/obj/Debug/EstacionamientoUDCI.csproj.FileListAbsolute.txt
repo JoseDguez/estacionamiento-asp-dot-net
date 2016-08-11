@@ -1,0 +1,7 @@
+c:\users\andres alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\bin\EstacionamientoUDCI.dll
+c:\users\andres alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\bin\EstacionamientoUDCI.pdb
+c:\users\andres alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\obj\Debug\EstacionamientoUDCI.dll
+c:\users\andres alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\obj\Debug\EstacionamientoUDCI.pdb
+C:\Users\Andres Alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\obj\Debug\EstacionamientoUDCI.csprojResolveAssemblyReference.cache
+C:\Users\Andres Alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\obj\Debug\RdlCompile.cache
+C:\Users\Andres Alvarado\documents\visual studio 2010\Projects\EstacionamientoUDCI\EstacionamientoUDCI\obj\Debug\RdlCompile.compiled

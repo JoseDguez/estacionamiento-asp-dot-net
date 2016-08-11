@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="EstacionamientoUDCI.MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="assets/plugins/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="/assets/plugins/jquery/jquery-1.12.2.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--NAVBAR MENU -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-heade
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/modules/Default.aspx">Estacionamiento UDCI</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul id="Menu" class="nav navbar-nav" runat="server">
+                    <li id="liAdm" class="dropdown" runat="server">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Admin <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li id="adm-001"><a href="/modules/admin/Users.aspx">Usuarios</a></li>
+                        <li id="adm-002"><a href="/modules/admin/ParkingBoxes.aspx">Cajones de Estacionamiento</a></li>
+                        <li id="adm-003"><a href="/modules/admin/PendingRequests.aspx">Solicitudes Pendientes</a></li>
+                      </ul>
+                    </li>
+                    <li id="liCycle" runat="server"><asp:LinkButton ID="ScholarCycleButton" runat="server" OnClick="ScholarCycleButton_Click">Definir Ciclo Escolar</asp:LinkButton></li>
+                    <li id="liCar" runat="server"><a href="/modules/MyCar.aspx">Mi Auto</a></li>
+                    <li id="liBox" runat="server"><asp:LinkButton ID="ReserveButton" runat="server" OnClick="ReserveButton_Click">Reservar Cajón</asp:LinkButton></li>
+                    <li id="liReport" runat="server"><a href="/modules/PaymentReports.aspx">Reportes de Pago</a></li>
+                </ul>
+              <ul id="UserActions" class="nav navbar-nav navbar-right" runat="server">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" runat="server" id="Username"></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <asp:LinkButton ID="LogOutButton" runat="server" OnClick="LogOutButton_Click">Cerrar Sesión</asp:LinkButton>
+                        </li>
+                    </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+        <!-- MAIN CONTENT -->
+        <div class="container-fluid">
+            <!-- Modal -->
+            <div id="ScholCycleModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Ciclo Escolar</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                <b>NOTA:</b> Si se registra un nuevo ciclo escolar, todos los cajones del estacionamiento serán liberados.
+                            </p>
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2">Ciclo Escolar:</label>
+                                    <div class="col-sm-9">
+                                        <asp:TextBox ID="ScholarCycleTextBox" CssClass="form-control" runat="server"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-9">
+                                        <asp:Button ID="RegisterScholarCycleButton" runat="server" Text="Registrar" OnClick="RegisterScholarCycleButton_Click" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="content" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
